@@ -1,0 +1,40 @@
+body{
+  font-family: Arial, Sans-Serif;
+  font-size: 14px;
+}
+
+.highlight{
+  background-color: #7c8696;
+  color: white;
+}
+
+body div{
+  float: left;
+}
+
+.stack{
+  border: 1px red solid;
+  width: 600px;
+  padding: 3px;
+}
+
+.stack-info{
+  border: 1px solid green;
+  width: 160px;
+  position: fixed;
+  right: 300px;
+  top: 100px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stack div {
+  height: 30px;
+  border: 1px blue solid;
+  margin: 2px;
+  float: none;
+  padding-top: 12px;
+  text-align: center;
+}
+
+
