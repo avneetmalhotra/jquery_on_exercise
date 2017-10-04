@@ -27,23 +27,17 @@ Stack.prototype.bindClickEventOnStackElement = function(){
   this.$stack.on('click', 'div', function(){
     var $clickedElement = $(this);
 
+    $clickedElement.siblings('div').removeClass('highlight');
+
     //if last element is on the top(i.e: first in DOM), which is removed
     if(_this.isFirstElement($clickedElement)){
       $clickedElement.remove();
       _this.updateStackSize(false)
     }
     //if not last element then
-    else{
-      if(!_this.isHighlighted($clickedElement))
-        $clickedElement.siblings('div').removeClass('highlight');
-    
-      $clickedElement.toggleClass('highlight');
-    }
+    else
+      $clickedElement.addClass('highlight');
   });
-};
-
-Stack.prototype.isHighlighted = function($element){
-  return $element.hasClass('highlight');
 };
 
 Stack.prototype.isFirstElement = function($element){
